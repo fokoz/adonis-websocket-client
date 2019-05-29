@@ -1592,7 +1592,7 @@ var JsonEncoder = {
  * @returns {String}
  *
  */
-var wsProtocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+var wsProtocol = (typeof window!=='undefined'&&"https:"===window.location.protocol) ? 'wss' : 'ws';
 
 /**
  * Connection class is used to make a TCP/Socket connection
